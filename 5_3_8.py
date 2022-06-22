@@ -12,4 +12,5 @@ list_cty = list(map(str, input().split()))
 list_cty = list(map(str, input().split()))
 list_cty = list(map(str, input().split()))
 list_cty = list(map(str, input().split()))
+list_cty = list(map(str, input().split()))
 
