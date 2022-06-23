@@ -1,9 +1,8 @@
 n = int(input())
-i = 1
-while True:
-    if i ** 2 > n:
-        print(i)
-        break
+s = 0
+for i in range(0, n):
+    if i % 3 == 0 or i % 5 == 0:
+        s += i
     else:
-        i += 1
         continue
+print(s)

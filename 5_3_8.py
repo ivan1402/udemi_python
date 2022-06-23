@@ -8,9 +8,25 @@ Sample Input:
 Москва Астрахань Новгород Димитровград Душанбе
 Sample Output:
 ДА """
-list_cty = list(map(str, input().split()))
-list_cty = list(map(str, input().split()))
-list_cty = list(map(str, input().split()))
-list_cty = list(map(str, input().split()))
-list_cty = list(map(str, input().split()))
-
+list_city = list(map(str, input().split()))
+k = 1
+n = len(list_city)
+for i in list_city:
+    if k <= n - 1:
+        if i[-1] != 'ь' and i[-1] != 'ъ' and i[-1] !='ы':
+            if i[-1] == list_city[k].lower()[0]:
+                k += 1
+                continue
+            else:
+                print('НЕТ')
+                break
+        else:
+            if i[-2] == list_city[k].lower()[0]:
+                k += 1
+                continue
+            else:
+                print('НЕТ')
+                break
+    else:
+        print('ДА')
+        break
