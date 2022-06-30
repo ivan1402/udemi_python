@@ -6,7 +6,22 @@ Sample Input:
 Sample Output:
 2 23
 """
+#a = 'Барабанщик бил бой в барабан'
 a = input()
-for i in a:
-    if i == 'ра':
-        print(i)
+k = 0
+c = 'ра'
+list_ind = []
+list_ind_2 = []
+
+while k != len(a) - 1:
+    if a[k:k+2] == c:
+        list_ind.append(k)
+        k += 1
+    else:
+        k += 1
+        continue
+
+if list_ind_2 != list_ind:
+    print(*list_ind)
+else:
+    print('-1')
